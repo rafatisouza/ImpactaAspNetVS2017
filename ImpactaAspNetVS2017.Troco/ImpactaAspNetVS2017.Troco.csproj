@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6A193663-5D78-4784-A20A-FEB1BC52DA2B}</ProjectGuid>
+    <ProjectGuid>{A4A55EF0-DE33-4F33-83D5-708F8EE5DB42}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ImpactaAspNet.capitulo01.Variaveis</RootNamespace>
-    <AssemblyName>ImpactaAspNet.capitulo01.Variaveis</AssemblyName>
+    <RootNamespace>ImpactaAspNetVS2017.Troco</RootNamespace>
+    <AssemblyName>ImpactaAspNetVS2017.Troco</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,17 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="VariaveisForm.cs">
+    <Compile Include="TrocoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VariaveisForm.Designer.cs">
-      <DependentUpon>VariaveisForm.cs</DependentUpon>
+    <Compile Include="TrocoForm.Designer.cs">
+      <DependentUpon>TrocoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="VariaveisForm.resx">
-      <DependentUpon>VariaveisForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,6 +62,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TrocoForm.resx">
+      <DependentUpon>TrocoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
