@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImpactaAspNetNet.Frete", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeticaoTeste", "RepeticaoTeste\RepeticaoTeste.csproj", "{90FEC26E-5D28-4D2E-8D02-29DDFE70BC1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.capitulo01VetoresColecoes.Testes", "AspNet.capitulo01VetoresColecoes.Testes\AspNet.capitulo01VetoresColecoes.Testes.csproj", "{1289013D-436A-4F34-B4ED-74ECEEDB4978}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{90FEC26E-5D28-4D2E-8D02-29DDFE70BC1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90FEC26E-5D28-4D2E-8D02-29DDFE70BC1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90FEC26E-5D28-4D2E-8D02-29DDFE70BC1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1289013D-436A-4F34-B4ED-74ECEEDB4978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1289013D-436A-4F34-B4ED-74ECEEDB4978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1289013D-436A-4F34-B4ED-74ECEEDB4978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1289013D-436A-4F34-B4ED-74ECEEDB4978}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

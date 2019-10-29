@@ -44,5 +44,16 @@ namespace RepeticaoTeste {
             }
 
         }
+
+        [TestMethod]
+        public void TodastringEhUmVetorTeste() {
+            var nome = "Rafael";            
+            Assert.AreEqual(nome[0], 'R');
+            Console.WriteLine();
+            
+            foreach (var item in nome) {
+                Console.WriteLine(item);
+            }
+        }
     }
 }
