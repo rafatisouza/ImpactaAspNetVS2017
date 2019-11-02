@@ -26,11 +26,11 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         [TestMethod()]
         public void ObterModeloTest()
         {
-            var modelo = repositorio.ObterModelo(4);
+            Dominios.Modelo modelo = repositorio.ObterModelo(4);
             Assert.AreEqual(modelo.Nome, "Polo");
 
             modelo = repositorio.ObterModelo(20);
-            Assert.IsNull(modelo);
+            Assert.IsNull(modelo.Marca);
         }
     }
 }

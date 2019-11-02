@@ -79,7 +79,6 @@
     <Content Include="bin\Debug\Dados\Cor.txt" />
     <Content Include="bin\Debug\Dados\Marca.txt" />
     <Content Include="bin\Debug\Dados\Modelo.xml" />
-    <Content Include="bin\Debug\Dados\XMLFile1.xml" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -32,14 +32,14 @@ namespace Oficina.Repositorios.SistemaArquivos
 
         public Modelo ObterModelo(int modeloId)
         {
-            Modelo modelo = null;
+            Modelo modelo = new Modelo();
                         
             foreach (var elemento in arquivoXml.Descendants("modelo"))
             {
                 var marcaRepositorio = new MarcaRepositorio().Obter(Convert.ToInt16(elemento.Element("id").Value));
-                if (Convert.ToInt16(elemento.Element("Id").Value) == modeloId)
+                if (Convert.ToInt16(elemento.Element("id").Value) == modeloId)
                 {
-                    modelo.Id = Convert.ToInt32(elemento.Element("id").Value);
+                    modelo.Id = Convert.ToInt16(elemento.Element("id").Value);
                     modelo.Nome = elemento.Element("nome").Value;
                     modelo.Marca = marcaRepositorio;
                     break;
