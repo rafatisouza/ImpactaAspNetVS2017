@@ -20,22 +20,18 @@
     <Observacao>usado</Observacao>
   </Veiculo>
   <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Placa>abc-1234</Placa>
+    <Placa>eew-1418</Placa>
     <Modelo>
-      <Id>1</Id>
-      <Nome>ká</Nome>
-      <Marca>
-        <Id>1</Id>
-        <Nome>Ford</Nome>
-      </Marca>
+      <Id>6</Id>
+      <Nome>Siena</Nome>
     </Modelo>
     <Cor>
       <Id>1</Id>
       <Nome>Branco</Nome>
     </Cor>
-    <Combustivel>Flex</Combustivel>
+    <Combustivel>Gasolina</Combustivel>
     <Cambio>Automatico</Cambio>
-    <Ano>2019</Ano>
-    <Observacao>usado</Observacao>
+    <Ano>0</Ano>
+    <Observacao>aaa</Observacao>
   </Veiculo>
 </veiculos>

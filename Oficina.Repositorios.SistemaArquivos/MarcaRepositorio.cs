@@ -9,7 +9,13 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class MarcaRepositorio
     {
-        private string CaminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoMarca"];
+
+
+        //private string CaminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoMarca"];
+
+        static string CaminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+        ConfigurationManager.AppSettings["caminhoArquivoMarca"]);
+        
         //private string CaminhoArquivo = @"Dado/marca.txt";
         public List<Marca> Obter()
         {

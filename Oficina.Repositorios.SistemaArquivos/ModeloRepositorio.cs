@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,11 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class ModeloRepositorio
     {
-        XDocument arquivoXml = XDocument.Load(ConfigurationManager.AppSettings["caminhoArquivoModelo"]);
+        //XDocument arquivoXml = XDocument.Load(ConfigurationManager.AppSettings["caminhoArquivoModelo"]);
+
+        static string caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+        ConfigurationManager.AppSettings["caminhoArquivoModelo"]);
+        XDocument arquivoXml = XDocument.Load(caminhoArquivo);
         public List<Modelo> ObterMarca(int marcaId)
         {
             var modelos = new List<Modelo>();

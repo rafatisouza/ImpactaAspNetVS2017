@@ -11,8 +11,10 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class CorRepositorio
     {
-        private string CaminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoCor"];
+        //private string CaminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoCor"];
         //private string CaminhoArquivo = @"Dado/cor.txt";
+        static string CaminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                                        ConfigurationManager.AppSettings["caminhoArquivoCor"]);
         public List <Cor> Obter()
         {            
             var cores = new List<Cor>();            

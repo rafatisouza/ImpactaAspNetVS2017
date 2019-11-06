@@ -1,0 +1,108 @@
+﻿@using Oficina.WebPages;
+@{
+    var aplicacao = new VeiculoAplicacao();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastro de veículos</title>
+
+</head>
+<body>
+    @if (IsPost)
+    {
+        aplicacao.Gravar();
+        Response.Redirect("veiculo");
+    }
+    <h1>Cadastro de veículos</h1>
+    <hr />
+    <form method="post">
+        <label>Marca</label>
+        <select onchange="obterModelos(this.value)" name="marca">
+            <optionvalue ="value">
+                Selecione</option>
+                @{
+
+                    foreach (var marca in aplicacao.Marcas)
+                    {
+                        <option value="@marca.Id" selected="@Convert.ToBoolean(marca.Id.ToString() ==  aplicacao.MarcaSelecionada)">@marca.Nome</option>
+                    }
+
+                }
+
+        </select>
+        <br />
+        <label>Modelo</label>
+        <select name="modelo">
+            <option value="value">Selecione</option>
+            @{
+
+                foreach (var modelo in aplicacao.Modelos)
+                {
+                    <option value="@modelo.Id">@modelo.Nome</option>
+                }
+
+            }
+        </select>
+        <br />
+        <label>Cor</label>
+        <select name="cor">
+            <option value="value">Selecione</option>
+            @{
+
+                foreach (var cor in aplicacao.Cores)
+                {
+                    <option value="@cor.Id">@cor.Nome</option>
+                }
+            }
+        </select>
+        <br />
+        <label>Combustível</label>
+        <select name="combustivel">
+            <option value="value">Selecione</option>
+            @{
+
+                foreach (var combustivel in aplicacao.Combustiveis)
+                {
+                    <option value="@((int)combustivel)">@combustivel</option>
+                }
+            }
+        </select>
+        <br />
+        <label>Cambio</label>
+        <select name="Cambio">
+            <option value="value">Selecione</option>
+            @{
+
+                foreach (var cambio in aplicacao.Cambios)
+                {
+                    <option value="@((int)cambio)">@cambio</option>
+                }
+            }
+        </select>
+        <br />
+        <label>Placa</label>
+        <input type="text" name="placa" value="" />
+        <br />
+        <label>Ano</label>
+        <input type="text" name="anome" value="" />
+        <br />
+        <label>Observação</label>
+        <br />
+        <textarea name="observacao" contenteditable="true" cols="40" rows="10"></textarea>
+        <br />
+        <input type="submit" name="gravar" value="Gravar" />
+    </form>
+    <script type="text/javascript">
+        function obterModelos(marcaId) {
+            const nomePagina = document.location.pathname;
+            document.location.href = nomePagina + "?marcaid=" + marcaId;
+        }
+    </script>
+</body>
+</html>
+
+
