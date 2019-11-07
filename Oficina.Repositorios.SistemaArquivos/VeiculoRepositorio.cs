@@ -18,10 +18,10 @@ namespace Oficina.Repositorios.SistemaArquivos
         ConfigurationManager.AppSettings["caminhoArquivoVeiculo"]);
         XDocument arquivoXml = XDocument.Load(caminhoArquivo);
 
-        public void Gravar(Veiculo veiculo)
+        public void Gravar<T>(T veiculo)
         {
             var registro = new StringWriter();
-            var serilizador = new XmlSerializer(typeof(Veiculo));
+            var serilizador = new XmlSerializer(typeof(T));
             
             serilizador.Serialize(registro, veiculo);
             

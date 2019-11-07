@@ -15,6 +15,8 @@ namespace Oficina.Repositorios.SistemaArquivos
         //private string CaminhoArquivo = @"Dado/cor.txt";
         static string CaminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                                         ConfigurationManager.AppSettings["caminhoArquivoCor"]);
+
+        //ToDO: 00 - polimorfismo por sobrecarga
         public List <Cor> Obter()
         {            
             var cores = new List<Cor>();            

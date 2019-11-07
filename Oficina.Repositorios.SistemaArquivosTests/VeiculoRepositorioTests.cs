@@ -15,15 +15,16 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         [TestMethod()]
         public void GravarTest()
         {
-                                    
-            Veiculo veiculo = new Veiculo() {
+
+            VeiculoPasseio veiculo = new VeiculoPasseio() {
                 Ano = 2019,
                 Cambio = Cambio.Automatico,
                 Combustivel = Combustivel.Flex,
                 Cor = new CorRepositorio().Obter(1),
                 Modelo  = new ModeloRepositorio().ObterModelo(1),
                 Observacao = "usado",
-                Placa = "abc-1234"
+                Placa = "abc-1234",
+                TipoCarroceria = TipoCarroceria.Hatch
             };
             new VeiculoRepositorio().Gravar(veiculo);
         }
