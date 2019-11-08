@@ -34,4 +34,20 @@
     <Ano>0</Ano>
     <Observacao>aaa</Observacao>
   </Veiculo>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Placa>EEW-1418</Placa>
+    <Modelo>
+      <Id>6</Id>
+      <Nome>Siena</Nome>
+    </Modelo>
+    <Cor>
+      <Id>3</Id>
+      <Nome>Azul</Nome>
+    </Cor>
+    <Combustivel>Etanol</Combustivel>
+    <Cambio>Manual</Cambio>
+    <Ano>0</Ano>
+    <Observacao>aaaaaaaaa</Observacao>
+    <TipoCarroceria>Picape</TipoCarroceria>
+  </VeiculoPasseio>
 </veiculos>

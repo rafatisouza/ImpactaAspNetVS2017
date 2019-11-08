@@ -2,6 +2,7 @@
 using Oficina.Repositorios.SistemaArquivos;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -19,6 +20,7 @@ namespace Oficina.WebPages
         private readonly VeiculoRepositorio veiculoRepositorio = new VeiculoRepositorio();
         
 
+
         public List<Marca> Marcas { get; set; }
         public string MarcaSelecionada { get; set; }
         public List<Cor> Cores { get; set; }
@@ -26,6 +28,7 @@ namespace Oficina.WebPages
         public List<Veiculo> Veiculos { get; set; }
         public List<Combustivel> Combustiveis { get; set; }
         public List<Cambio> Cambios { get; set; }
+        public string MensagemErro { get; private set; }
 
         private void PopularControles()
         {
@@ -36,27 +39,48 @@ namespace Oficina.WebPages
                 Modelos = modeloRepositorio.ObterMarca(Convert.ToInt32(MarcaSelecionada));
             }
             Cores = corRepositorio.Obter();
-        //    Modelos = modeloRepositorio.o;
+            //    Modelos = modeloRepositorio.o;
             Combustiveis = Enum.GetValues(typeof(Combustivel)).Cast<Combustivel>().ToList();
             Cambios = Enum.GetValues(typeof(Cambio)).Cast<Cambio>().ToList();
         }
 
-        public void Gravar() {
-            var formulario = HttpContext.Current.Request.Form;
-            var veiculo = new VeiculoPasseio()
+        public void Gravar()
+        {
+            try
             {
-                Ano = Convert.ToInt16(formulario["ano"]),
-                Cambio = (Cambio)Convert.ToInt32(formulario["cambio"]),
-                Combustivel = (Combustivel)Convert.ToInt32(formulario["combustivel"]),
-                Cor = corRepositorio.Obter(Convert.ToInt32(formulario["cor"])),
-                Modelo = modeloRepositorio.ObterModelo(Convert.ToInt32(formulario["modelo"])),
-                Observacao = formulario["observacao"],
-                Placa = formulario["placa"],
-                TipoCarroceria = TipoCarroceria.Picape
-                
-        };
-            
-            veiculoRepositorio.Gravar(veiculo);
+                var formulario = HttpContext.Current.Request.Form;
+                var veiculo = new VeiculoPasseio()
+                {
+                    Ano = Convert.ToInt16(formulario["ano"]),
+                    Cambio = (Cambio)Convert.ToInt32(formulario["cambio"]),
+                    Combustivel = (Combustivel)Convert.ToInt32(formulario["combustivel"]),
+                    Cor = corRepositorio.Obter(Convert.ToInt32(formulario["cor"])),
+                    Modelo = modeloRepositorio.ObterModelo(Convert.ToInt32(formulario["modelo"])),
+                    Observacao = formulario["observacao"],
+                    Placa = formulario["placa"],
+                    TipoCarroceria = TipoCarroceria.Picape
+
+                };
+
+                veiculoRepositorio.Gravar(veiculo);
+            }
+            catch (FileNotFoundException ex)
+            {
+                MensagemErro = $"Arquivo{ex.FileName} não encontrato";
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                MensagemErro = $"caminho não encontrado";                
+            }
+            catch (Exception ex)
+            {
+                MensagemErro = "Eita algo deu errado!";
+            }
+            finally
+            {
+                //não é obrigatorio e roda sempre, com sucesso ou erro.
+                // se tiver um retur, o finally também é executado.
+            }
         }
     }
 

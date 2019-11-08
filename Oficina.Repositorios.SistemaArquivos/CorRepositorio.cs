@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
-    public class CorRepositorio
+    public class CorRepositorio : RepositorioBase
     {
-        //private string CaminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoCor"];
-        //private string CaminhoArquivo = @"Dado/cor.txt";
-        static string CaminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
-                                        ConfigurationManager.AppSettings["caminhoArquivoCor"]);
-
+       
+        public CorRepositorio() : base("caminhoArquivoCor")
+        {
+            
+        }
+        
         //ToDO: 00 - polimorfismo por sobrecarga
         public List <Cor> Obter()
         {            

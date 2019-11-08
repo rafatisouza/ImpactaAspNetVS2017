@@ -7,15 +7,15 @@ using System.Linq;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
-    public class MarcaRepositorio
+    public class MarcaRepositorio : RepositorioBase
     {
 
 
-        //private string CaminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoMarca"];
+  
+        public MarcaRepositorio() : base("caminhoArquivoMarca")
+        {
 
-        static string CaminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
-        ConfigurationManager.AppSettings["caminhoArquivoMarca"]);
-        
+        }
         //private string CaminhoArquivo = @"Dado/marca.txt";
         public List<Marca> Obter()
         {
