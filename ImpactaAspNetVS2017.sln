@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.WebPages", "Oficina
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.DominiosTests", "Oficina.DominiosTests\Oficina.DominiosTests.csproj", "{1D1E6DDB-40D2-4D44-ABC4-A67C734C8245}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Capitulo03.Portfolio", "AspNet.Capitulo03.Portfolio\AspNet.Capitulo03.Portfolio.csproj", "{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portfolio", "Portfolio", "{40276C96-05DB-4CE5-B709-962EC7B71F78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +75,10 @@ Global
 		{1D1E6DDB-40D2-4D44-ABC4-A67C734C8245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D1E6DDB-40D2-4D44-ABC4-A67C734C8245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D1E6DDB-40D2-4D44-ABC4-A67C734C8245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +88,7 @@ Global
 		{9F6F1221-137A-4815-A60E-13D76A10EBF6} = {E8F17526-83B2-4776-9C2E-20B97A07FCE4}
 		{98AA9D04-8E20-4FAC-8081-9FE312210A83} = {E8F17526-83B2-4776-9C2E-20B97A07FCE4}
 		{60490783-DA07-4B36-881B-11A056461A3C} = {E8F17526-83B2-4776-9C2E-20B97A07FCE4}
+		{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3} = {40276C96-05DB-4CE5-B709-962EC7B71F78}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D9BC19C-DF8C-4559-930F-E50D913566DD}

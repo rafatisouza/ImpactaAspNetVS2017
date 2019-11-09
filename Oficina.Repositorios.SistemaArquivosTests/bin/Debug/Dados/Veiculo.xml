@@ -78,4 +78,24 @@
     <Observacao>usado</Observacao>
     <TipoCarroceria>Hatch</TipoCarroceria>
   </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Placa>ABC-1234</Placa>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>ká</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Ford</Nome>
+      </Marca>
+    </Modelo>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Branco</Nome>
+    </Cor>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Automatico</Cambio>
+    <Ano>2019</Ano>
+    <Observacao>usado</Observacao>
+    <TipoCarroceria>Hatch</TipoCarroceria>
+  </VeiculoPasseio>
 </veiculos>

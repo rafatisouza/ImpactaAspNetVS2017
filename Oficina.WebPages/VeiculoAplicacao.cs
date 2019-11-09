@@ -75,6 +75,7 @@ namespace Oficina.WebPages
             catch (Exception ex)
             {
                 MensagemErro = "Eita algo deu errado!";
+                // Logar (ex);
             }
             finally
             {
