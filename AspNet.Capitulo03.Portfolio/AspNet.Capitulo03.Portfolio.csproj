@@ -169,6 +169,12 @@
     <Content Include="Content\fancybox\fancybox_sprite%402x.png" />
     <Content Include="Content\fancybox\fancybox_sprite.png" />
     <Content Include="Content\imagens\MonaLisa.jpg" />
+    <Content Include="Content\imagens\Portifolio\img10.jpg" />
+    <Content Include="Content\imagens\Portifolio\img11.jpg" />
+    <Content Include="Content\imagens\Portifolio\img12.jpg" />
+    <Content Include="Content\imagens\Portifolio\img7.jpg" />
+    <Content Include="Content\imagens\Portifolio\img8.jpg" />
+    <Content Include="Content\imagens\Portifolio\img9.jpg" />
     <Content Include="Content\jquery.fancybox-buttons.css" />
     <Content Include="Content\jquery.fancybox-thumbs.css" />
     <Content Include="Content\jquery.fancybox.css" />
@@ -182,6 +188,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\Home\portfolio.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />

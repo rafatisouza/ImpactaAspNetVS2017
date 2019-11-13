@@ -29,6 +29,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Capitulo03.Portfolio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portfolio", "Portfolio", "{40276C96-05DB-4CE5-B709-962EC7B71F78}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViajemOnline", "ViajemOnline", "{1A892F08-0DD0-4F1B-A398-BA207303F064}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViagemOnline.Dominio", "ViagemOnline.Dominio\ViagemOnline.Dominio.csproj", "{E818B95C-DFD3-48FB-AD38-3CC53545647A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViagensOnline.Repositorios.SqlServel", "ViagensOnline.Repositorios.SqlServel\ViagensOnline.Repositorios.SqlServel.csproj", "{462A4011-4F96-4750-9402-BBE28A8C9A54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViagensOnlineRepositoriosTest", "ViagensOnlineRepositoriosTest\ViagensOnlineRepositoriosTest.csproj", "{D8B86A06-9D2E-46EF-B610-27DD7C10A73F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +87,18 @@ Global
 		{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E818B95C-DFD3-48FB-AD38-3CC53545647A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E818B95C-DFD3-48FB-AD38-3CC53545647A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E818B95C-DFD3-48FB-AD38-3CC53545647A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E818B95C-DFD3-48FB-AD38-3CC53545647A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{462A4011-4F96-4750-9402-BBE28A8C9A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{462A4011-4F96-4750-9402-BBE28A8C9A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{462A4011-4F96-4750-9402-BBE28A8C9A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{462A4011-4F96-4750-9402-BBE28A8C9A54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B86A06-9D2E-46EF-B610-27DD7C10A73F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B86A06-9D2E-46EF-B610-27DD7C10A73F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B86A06-9D2E-46EF-B610-27DD7C10A73F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B86A06-9D2E-46EF-B610-27DD7C10A73F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +109,9 @@ Global
 		{98AA9D04-8E20-4FAC-8081-9FE312210A83} = {E8F17526-83B2-4776-9C2E-20B97A07FCE4}
 		{60490783-DA07-4B36-881B-11A056461A3C} = {E8F17526-83B2-4776-9C2E-20B97A07FCE4}
 		{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3} = {40276C96-05DB-4CE5-B709-962EC7B71F78}
+		{E818B95C-DFD3-48FB-AD38-3CC53545647A} = {1A892F08-0DD0-4F1B-A398-BA207303F064}
+		{462A4011-4F96-4750-9402-BBE28A8C9A54} = {1A892F08-0DD0-4F1B-A398-BA207303F064}
+		{D8B86A06-9D2E-46EF-B610-27DD7C10A73F} = {1A892F08-0DD0-4F1B-A398-BA207303F064}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D9BC19C-DF8C-4559-930F-E50D913566DD}

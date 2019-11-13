@@ -5,6 +5,11 @@ using System.Web;
 
 namespace AspNet.Capitulo03.Portfolio.Models {
     public class PortfolioViewModel {
-        public List<string> CaminhosImagens { get; set; }
+        public List<string> CaminhosImagens { get; set; } = new List<string>();
+
+        public PortfolioViewModel()
+        {
+            //CaminhosImagens = new List<string>();
+        }
     }
 }
