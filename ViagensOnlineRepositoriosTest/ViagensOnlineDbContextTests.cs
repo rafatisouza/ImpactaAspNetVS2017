@@ -33,5 +33,37 @@ namespace ViagensOnline.Repositorios.SqlServel.Tests
             db.Destinos.Add(viagem);
             db.SaveChanges();
         }
+
+        [TestMethod]
+        public void AtualizarTeste()
+        {
+            var destino = db.Destinos.Where(x => x.Id == 1).SingleOrDefault();
+            
+            //var destino = db.Destinos.Find(1);
+            
+            destino.Nome = "Salvaor";
+            destino.NomeImagem = "Farol da barra";
+            db.SaveChanges();
+            destino = db.Destinos.Find(1);
+            Assert.AreEqual(destino.Nome, "Salvaor");
+        }
+        [TestMethod]
+        public void ExcluirTeste()
+        {
+            var destino = db.Destinos.SingleOrDefault(x => x.Id == 2);
+
+            if (destino != null)
+            {
+                db.Destinos.Remove(destino);
+                db.SaveChanges();
+            }
+            
+
+            destino = db.Destinos.SingleOrDefault(x => x.Id == 1);
+
+            Assert.IsNull(destino);
+
+
+        }
     }
 }

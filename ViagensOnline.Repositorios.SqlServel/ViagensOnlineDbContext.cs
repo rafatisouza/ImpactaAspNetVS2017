@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ViagemOnline.Dominio;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ViagensOnline.Repositorios.SqlServel
 {
@@ -16,6 +17,11 @@ namespace ViagensOnline.Repositorios.SqlServel
         {
 
         }
-        
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }
