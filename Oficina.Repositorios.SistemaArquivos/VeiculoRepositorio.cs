@@ -1,11 +1,6 @@
-﻿using Oficina.Dominios;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Configuration;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
@@ -13,22 +8,24 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class VeiculoRepositorio : RepositorioBase
     {
-        private readonly XDocument arquivoXml;
-        public VeiculoRepositorio(): base("caminhoArquivoVeiculo")
+       private XDocument arquivoXml;
+
+        public VeiculoRepositorio() : base("caminhoArquivoVeiculo")
         {
-            arquivoXml = XDocument.Load(CaminhoArquivo);
+            //arquivoXml = XDocument.Load(CaminhoArquivo);
         }
-                
+
         public void Gravar<T>(T veiculo)
         {
             var registro = new StringWriter();
-            var serilizador = new XmlSerializer(typeof(T));
-            
-            serilizador.Serialize(registro, veiculo);
-            
+            var serializador = new XmlSerializer(typeof(T));
+
+            serializador.Serialize(registro, veiculo);
+
+            arquivoXml = XDocument.Load(CaminhoArquivo);
+
             arquivoXml.Root.Add(XElement.Parse(registro.ToString()));
             arquivoXml.Save(CaminhoArquivo);
         }
-        
     }
 }

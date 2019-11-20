@@ -2,7 +2,7 @@
 <modelos>
   <modelo>
     <id>1</id>
-    <nome>ká</nome>
+    <nome>Ká</nome>
     <marcaId>1</marcaId>
   </modelo>
   <modelo>
@@ -12,7 +12,7 @@
   </modelo>
   <modelo>
     <id>3</id>
-    <nome>Gol</nome>
+    <nome>Fox</nome>
     <marcaId>3</marcaId>
   </modelo>
   <modelo>
@@ -27,7 +27,7 @@
   </modelo>
   <modelo>
     <id>6</id>
-    <nome>Siena</nome>
+    <nome>Mobi</nome>
     <marcaId>2</marcaId>
   </modelo>
 </modelos>

@@ -1,6 +1,6 @@
-﻿namespace ImpactaAspNet.capitulo01.Variaveis
+﻿namespace ImpactaAspNet.Capitulo01.Variaveis
 {
-    partial class Form1
+    partial class VariaveisForm
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,44 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VariaveisForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.operaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aritmeticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reduzidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incrementaisDecrementaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.booleanasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logicasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resultadolistBox = new System.Windows.Forms.ListBox();
-            this.TernarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2.SuspendLayout();
+            this.resultadoListBox = new System.Windows.Forms.ListBox();
+            this.ternarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(370, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.operaçõesToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(370, 24);
-            this.menuStrip2.TabIndex = 2;
-            this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(308, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // operaçõesToolStripMenuItem
             // 
@@ -75,7 +59,7 @@
             this.incrementaisDecrementaisToolStripMenuItem,
             this.booleanasToolStripMenuItem,
             this.logicasToolStripMenuItem,
-            this.TernarioToolStripMenuItem});
+            this.ternarioToolStripMenuItem});
             this.operaçõesToolStripMenuItem.Name = "operaçõesToolStripMenuItem";
             this.operaçõesToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.operaçõesToolStripMenuItem.Text = "&Operações";
@@ -115,36 +99,35 @@
             this.logicasToolStripMenuItem.Text = "&Lógicas";
             this.logicasToolStripMenuItem.Click += new System.EventHandler(this.logicasToolStripMenuItem_Click);
             // 
-            // resultadolistBox
+            // resultadoListBox
             // 
-            this.resultadolistBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.resultadolistBox.FormattingEnabled = true;
-            this.resultadolistBox.Location = new System.Drawing.Point(0, 48);
-            this.resultadolistBox.Name = "resultadolistBox";
-            this.resultadolistBox.Size = new System.Drawing.Size(370, 241);
-            this.resultadolistBox.TabIndex = 3;
+            this.resultadoListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.resultadoListBox.FormattingEnabled = true;
+            this.resultadoListBox.Location = new System.Drawing.Point(0, 24);
+            this.resultadoListBox.Name = "resultadoListBox";
+            this.resultadoListBox.Size = new System.Drawing.Size(308, 426);
+            this.resultadoListBox.TabIndex = 1;
             // 
-            // TernarioToolStripMenuItem
+            // ternarioToolStripMenuItem
             // 
-            this.TernarioToolStripMenuItem.Name = "TernarioToolStripMenuItem";
-            this.TernarioToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.TernarioToolStripMenuItem.Text = "Ternário";
-            this.TernarioToolStripMenuItem.Click += new System.EventHandler(this.TernarioToolStripMenuItem_Click_1);
+            this.ternarioToolStripMenuItem.Name = "ternarioToolStripMenuItem";
+            this.ternarioToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.ternarioToolStripMenuItem.Text = "&Ternário";
+            this.ternarioToolStripMenuItem.Click += new System.EventHandler(this.ternarioToolStripMenuItem_Click);
             // 
-            // Form1
+            // VariaveisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 289);
-            this.Controls.Add(this.resultadolistBox);
+            this.ClientSize = new System.Drawing.Size(308, 450);
+            this.Controls.Add(this.resultadoListBox);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "VariaveisForm";
             this.Text = "Variáveis";
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,18 +135,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem operaçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aritmeticasToolStripMenuItem;
-        private System.Windows.Forms.ListBox resultadolistBox;
+        private System.Windows.Forms.ListBox resultadoListBox;
         private System.Windows.Forms.ToolStripMenuItem reduzidasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incrementaisDecrementaisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem booleanasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logicasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem TernarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ternarioToolStripMenuItem;
     }
 }
-
 

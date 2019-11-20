@@ -8,7 +8,7 @@ namespace Pessoal.Dominio.Interfaces
     public interface ITarefaRepositorio
     {
         int Inserir(Tarefa tarefa);
-        List<Tarefa> SelecionarTodos();
+        List<Tarefa> Selecionar();
         Tarefa Selecionar(int id);
         void Atualizar(Tarefa tarefa);
         void Excluir(int id);

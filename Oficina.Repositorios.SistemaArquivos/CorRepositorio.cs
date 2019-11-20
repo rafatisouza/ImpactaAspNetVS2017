@@ -1,34 +1,30 @@
-﻿using Oficina.Dominios;
+﻿using Oficina.Dominio;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
-using System.Linq;
-    using System.Text;
-using System.Threading.Tasks;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
     public class CorRepositorio : RepositorioBase
     {
-       
         public CorRepositorio() : base("caminhoArquivoCor")
         {
-            
+            //base
         }
-        
-        //ToDO: 00 - polimorfismo por sobrecarga
-        public List <Cor> Obter()
-        {            
-            var cores = new List<Cor>();            
-            foreach (var linha in File.ReadAllLines(CaminhoArquivo))   
+
+        // ToDo: OO - Polimorfismo por sobrecarga.
+        public List<Cor> Obter()
+        {
+            var cores = new List<Cor>();
+
+            foreach (var linha in File.ReadAllLines(CaminhoArquivo))
             {
-                Cor cor = new Cor();
-                cor.Id =  Convert.ToInt16(linha.Substring(0, 5));
+                var cor = new Cor();
+                cor.Id = Convert.ToInt32(linha.Substring(0, 5));
                 cor.Nome = linha.Substring(5);
 
                 cores.Add(cor);
-
             }
 
             return cores;
@@ -36,12 +32,23 @@ namespace Oficina.Repositorios.SistemaArquivos
 
         public Cor Obter(int id)
         {
-            var todos = Obter();
-            
-           Cor retorno = todos.SingleOrDefault(x => x.Id == id);
+            Cor cor = null;
 
-            return retorno;
+            foreach (var linha in File.ReadAllLines(CaminhoArquivo))
+            {
+                var linhaId = Convert.ToInt32(linha.Substring(0, 5));
+
+                if (id == linhaId)
+                {
+                    cor = new Cor();
+                    cor.Id = linhaId;
+                    cor.Nome = linha.Substring(5);
+
+                    break;
+                }               
+            }
+
+            return cor;
         }
     }
-    
 }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Oficina.Dominios;
+using Oficina.Dominio;
 using Oficina.Repositorios.SistemaArquivos;
 using System;
 using System.Collections.Generic;
@@ -10,23 +10,23 @@ using System.Threading.Tasks;
 namespace Oficina.Repositorios.SistemaArquivos.Tests
 {
     [TestClass()]
-    public class VeiculoRepositorioTest
+    public class VeiculoRepositorioTests
     {
         [TestMethod()]
         public void GravarTest()
         {
+            var veiculo = new VeiculoPasseio();
 
-            VeiculoPasseio veiculo = new VeiculoPasseio() {
-                Ano = 2019,
-                Cambio = Cambio.Automatico,
-                Combustivel = Combustivel.Flex,
-                Cor = new CorRepositorio().Obter(1),
-                Modelo  = new ModeloRepositorio().ObterModelo(1),
-                Observacao = "usado",
-                Placa = "abc-1234",
-                TipoCarroceria = TipoCarroceria.Hatch
-            };
-            new VeiculoRepositorio().Gravar(veiculo);
+            veiculo.Ano = 2014;
+            veiculo.Cambio = Cambio.Manual;
+            veiculo.Combustivel = Combustivel.Flex;
+            veiculo.Cor = new CorRepositorio().Obter(1);
+            veiculo.Modelo = new ModeloRepositorio().Obter(1);
+            veiculo.Observacao = "Obs";
+            veiculo.Placa = "ABC1234";
+            veiculo.TipoCarroceria = TipoCarroceria.Hatch;
+
+            new VeiculoRepositorio().Gravar<VeiculoPasseio>(veiculo);
         }
     }
 }

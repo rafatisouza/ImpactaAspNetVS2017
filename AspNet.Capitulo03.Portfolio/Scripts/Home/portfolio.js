@@ -1,7 +1,8 @@
-﻿//document.addEventListener("DOMContentLoaded", inicializar)
+﻿//document.addEventListener("DOMContentLoaded", inicializar);
 //window.onload = inicializar;
 $(document).ready(inicializar);
+
 function inicializar() {
     //document.getElementsByClassName("fancybox");
-    $(".fancybox").fancybox();    
+    $(".fancybox").fancybox();
 }

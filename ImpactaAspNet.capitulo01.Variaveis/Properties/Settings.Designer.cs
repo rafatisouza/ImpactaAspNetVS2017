@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ImpactaAspNet.capitulo01.Variaveis.Properties
+namespace ImpactaAspNet.Capitulo01.Variaveis.Properties
 {
 
 

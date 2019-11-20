@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associada a um assembly.
-[assembly: AssemblyTitle("ImpactaAspNet.capitulo01.Variaveis")]
+[assembly: AssemblyTitle("ImpactaAspNet.Capitulo01.Variaveis")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ImpactaAspNet.capitulo01.Variaveis")]
+[assembly: AssemblyProduct("ImpactaAspNet.Capitulo01.Variaveis")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
-[assembly: Guid("6a193663-5d78-4784-a20a-feb1bc52da2b")]
+[assembly: Guid("af19a4a5-9ec8-4675-8c57-31146acc7b99")]
 
 // As informações da versão de um assembly consistem nos quatro valores a seguir:
 //

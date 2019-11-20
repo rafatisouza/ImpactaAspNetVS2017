@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <veiculos>
   <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Placa>abc-1234</Placa>
+    <Placa>ABC1234</Placa>
     <Modelo>
       <Id>1</Id>
-      <Nome>ká</Nome>
+      <Nome>Ká</Nome>
       <Marca>
         <Id>1</Id>
         <Nome>Ford</Nome>
@@ -15,15 +15,15 @@
       <Nome>Branco</Nome>
     </Cor>
     <Combustivel>Flex</Combustivel>
-    <Cambio>Automatico</Cambio>
-    <Ano>2019</Ano>
-    <Observacao>usado</Observacao>
+    <Cambio>Manual</Cambio>
+    <Ano>2014</Ano>
+    <Observacao>Obs</Observacao>
   </Veiculo>
   <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Placa>abc-1234</Placa>
+    <Placa>ABC1234</Placa>
     <Modelo>
       <Id>1</Id>
-      <Nome>ká</Nome>
+      <Nome>Ká</Nome>
       <Marca>
         <Id>1</Id>
         <Nome>Ford</Nome>
@@ -34,15 +34,15 @@
       <Nome>Branco</Nome>
     </Cor>
     <Combustivel>Flex</Combustivel>
-    <Cambio>Automatico</Cambio>
-    <Ano>2019</Ano>
-    <Observacao>usado</Observacao>
+    <Cambio>Manual</Cambio>
+    <Ano>2014</Ano>
+    <Observacao>Obs</Observacao>
   </Veiculo>
   <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Placa>abc-1234</Placa>
+    <Placa>ABC1234</Placa>
     <Modelo>
       <Id>1</Id>
-      <Nome>ká</Nome>
+      <Nome>Ká</Nome>
       <Marca>
         <Id>1</Id>
         <Nome>Ford</Nome>
@@ -53,16 +53,16 @@
       <Nome>Branco</Nome>
     </Cor>
     <Combustivel>Flex</Combustivel>
-    <Cambio>Automatico</Cambio>
-    <Ano>2019</Ano>
-    <Observacao>usado</Observacao>
+    <Cambio>Manual</Cambio>
+    <Ano>2014</Ano>
+    <Observacao>Obs</Observacao>
     <TipoCarroceria>Hatch</TipoCarroceria>
   </VeiculoPasseio>
   <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Placa>ABC-1234</Placa>
+    <Placa>ABC1234</Placa>
     <Modelo>
       <Id>1</Id>
-      <Nome>ká</Nome>
+      <Nome>Ká</Nome>
       <Marca>
         <Id>1</Id>
         <Nome>Ford</Nome>
@@ -73,16 +73,16 @@
       <Nome>Branco</Nome>
     </Cor>
     <Combustivel>Flex</Combustivel>
-    <Cambio>Automatico</Cambio>
-    <Ano>2019</Ano>
-    <Observacao>usado</Observacao>
+    <Cambio>Manual</Cambio>
+    <Ano>2014</Ano>
+    <Observacao>Obs</Observacao>
     <TipoCarroceria>Hatch</TipoCarroceria>
   </VeiculoPasseio>
   <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Placa>ABC-1234</Placa>
+    <Placa>ABC1234</Placa>
     <Modelo>
       <Id>1</Id>
-      <Nome>ká</Nome>
+      <Nome>Ká</Nome>
       <Marca>
         <Id>1</Id>
         <Nome>Ford</Nome>
@@ -93,9 +93,9 @@
       <Nome>Branco</Nome>
     </Cor>
     <Combustivel>Flex</Combustivel>
-    <Cambio>Automatico</Cambio>
-    <Ano>2019</Ano>
-    <Observacao>usado</Observacao>
+    <Cambio>Manual</Cambio>
+    <Ano>2014</Ano>
+    <Observacao>Obs</Observacao>
     <TipoCarroceria>Hatch</TipoCarroceria>
   </VeiculoPasseio>
 </veiculos>

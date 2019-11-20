@@ -1,56 +1,69 @@
-﻿using Oficina.Dominios;
+﻿using Oficina.Dominio;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
-    public class ModeloRepositorio : RepositorioBase 
+    public class ModeloRepositorio : RepositorioBase
     {
-        private readonly XDocument arquivoXml;
+        private XDocument arquivoXml;
+
         public ModeloRepositorio() : base("caminhoArquivoModelo")
         {
-            arquivoXml = XDocument.Load(CaminhoArquivo);
+
         }
-        
-        public List<Modelo> ObterMarca(int marcaId)
+
+        public List<Modelo> ObterPorMarca(int marcaId)
         {
             var modelos = new List<Modelo>();
-            var modelo = new Modelo();
-            var marcaRepositorio = new MarcaRepositorio().Obter(marcaId);
+            arquivoXml = XDocument.Load(CaminhoArquivo);
+
             foreach (var elemento in arquivoXml.Descendants("modelo"))
             {
-                if(Convert.ToInt16(elemento.Element("marcaId").Value) == marcaId)
+                //if (elemento.Element("marcaId").Value.Equals(marcaId.ToString()))
+                if (elemento.Element("marcaId").Value == marcaId.ToString())
                 {
+                    var modelo = new Modelo();
+
                     modelo.Id = Convert.ToInt32(elemento.Element("id").Value);
                     modelo.Nome = elemento.Element("nome").Value;
-                    modelo.Marca = marcaRepositorio;
+
+                    var marcaRepositorio = new MarcaRepositorio();
+
+                    modelo.Marca = marcaRepositorio.Obter(marcaId);
+
                     modelos.Add(modelo);
-                }                   
+                }
             }
+
             return modelos;
         }
 
-        public Modelo ObterModelo(int modeloId)
+        public Modelo Obter(int id)
         {
-            Modelo modelo = new Modelo();
-                        
+            Modelo modelo = null;
+            arquivoXml = XDocument.Load(CaminhoArquivo);
+
             foreach (var elemento in arquivoXml.Descendants("modelo"))
             {
-                var marcaRepositorio = new MarcaRepositorio().Obter(Convert.ToInt16(elemento.Element("id").Value));
-                if (Convert.ToInt16(elemento.Element("id").Value) == modeloId)
+                //if (elemento.Element("marcaId").Value.Equals(marcaId.ToString()))
+                if (elemento.Element("id").Value == id.ToString())
                 {
-                    modelo.Id = Convert.ToInt16(elemento.Element("id").Value);
+                    modelo = new Modelo();
+
+                    modelo.Id = Convert.ToInt32(elemento.Element("id").Value);
                     modelo.Nome = elemento.Element("nome").Value;
-                    modelo.Marca = marcaRepositorio;
+
+                    var marcaRepositorio = new MarcaRepositorio();
+
+                    modelo.Marca = marcaRepositorio
+                        .Obter(Convert.ToInt32(elemento.Element("marcaId").Value));
+
                     break;
                 }
             }
+
             return modelo;
         }
     }

@@ -1,34 +1,31 @@
-﻿using Oficina.Dominios;
+﻿using Oficina.Dominio;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
-using System.Linq;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
     public class MarcaRepositorio : RepositorioBase
     {
-
-
-  
         public MarcaRepositorio() : base("caminhoArquivoMarca")
         {
 
         }
-        //private string CaminhoArquivo = @"Dado/marca.txt";
+
         public List<Marca> Obter()
         {
             var marcas = new List<Marca>();
+
             foreach (var linha in File.ReadAllLines(CaminhoArquivo))
             {
-                var conteudos = linha.Split('|').ToArray();
-                Marca Marca = new Marca();
-                Marca.Id = Convert.ToInt16(conteudos[0]);
-                Marca.Nome = conteudos[1];
+                var propriedades = linha.Split('|');
 
-                marcas.Add(Marca);
+                var marca = new Marca();
+                marca.Id = Convert.ToInt32(propriedades[0]);
+                marca.Nome = propriedades[1];
 
+                marcas.Add(marca);
             }
 
             return marcas;
@@ -36,11 +33,25 @@ namespace Oficina.Repositorios.SistemaArquivos
 
         public Marca Obter(int id)
         {
-            var todos = Obter();
+            Marca marca = null;
 
-            Marca retorno = todos.SingleOrDefault(x => x.Id == id);
+            foreach (var linha in File.ReadAllLines(CaminhoArquivo))
+            {
+                var propriedades = linha.Split('|');
 
-            return retorno;
+                var linhaId = Convert.ToInt32(propriedades[0]);
+
+                if (id == linhaId)
+                {
+                    marca = new Marca();
+                    marca.Id = linhaId;
+                    marca.Nome = propriedades[1];
+
+                    break;
+                }
+            }
+
+            return marca;
         }
     }
 }

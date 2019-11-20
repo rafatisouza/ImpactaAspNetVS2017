@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{60490783-DA07-4B36-881B-11A056461A3C}</ProjectGuid>
+    <ProjectGuid>{2ADA1B64-1CA2-4BB7-89BC-16F431E39A87}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -33,7 +33,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -111,12 +110,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Oficina.Dominios\Oficina.Dominios.csproj">
-      <Project>{495a8c1a-ea8d-4287-a598-bec2e3f8c6a3}</Project>
-      <Name>Oficina.Dominios</Name>
+    <ProjectReference Include="..\Oficina.Dominio\Oficina.Dominio.csproj">
+      <Project>{91cf9c18-ce6d-49bf-912c-3919936dd09f}</Project>
+      <Name>Oficina.Dominio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Oficina.Repositorios.SistemaArquivos\Oficina.Repositorios.SistemaArquivos.csproj">
-      <Project>{9f6f1221-137a-4815-a60e-13d76a10ebf6}</Project>
+      <Project>{7ca83158-4065-43c2-9203-25335fb41cff}</Project>
       <Name>Oficina.Repositorios.SistemaArquivos</Name>
     </ProjectReference>
   </ItemGroup>
@@ -133,9 +132,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49690</DevelopmentServerPort>
+          <DevelopmentServerPort>49856</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49690/</IISUrl>
+          <IISUrl>http://localhost:49856/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

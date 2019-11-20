@@ -1,4 +1,4 @@
-﻿using Oficina.Dominios;
+﻿using Oficina.Dominio;
 using Oficina.Repositorios.SistemaArquivos;
 using System;
 using System.Collections.Generic;
@@ -10,79 +10,85 @@ namespace Oficina.WebPages
 {
     public class VeiculoAplicacao
     {
+        private readonly CorRepositorio corRepositorio = new CorRepositorio();
+        private readonly MarcaRepositorio marcaRepositorio = new MarcaRepositorio();
+        private readonly ModeloRepositorio modeloRepositorio = new ModeloRepositorio();
+        private readonly VeiculoRepositorio veiculoRepositorio = new VeiculoRepositorio();
+
         public VeiculoAplicacao()
         {
             PopularControles();
         }
-        private readonly MarcaRepositorio marcaRepositoprio = new MarcaRepositorio();
-        private readonly CorRepositorio corRepositorio = new CorRepositorio();
-        private readonly ModeloRepositorio modeloRepositorio = new ModeloRepositorio();
-        private readonly VeiculoRepositorio veiculoRepositorio = new VeiculoRepositorio();
-        
-
 
         public List<Marca> Marcas { get; set; }
         public string MarcaSelecionada { get; set; }
         public List<Cor> Cores { get; set; }
         public List<Modelo> Modelos { get; set; } = new List<Modelo>();
-        public List<Veiculo> Veiculos { get; set; }
         public List<Combustivel> Combustiveis { get; set; }
         public List<Cambio> Cambios { get; set; }
         public string MensagemErro { get; private set; }
 
         private void PopularControles()
         {
-            Marcas = marcaRepositoprio.Obter();
+            Marcas = marcaRepositorio.Obter();
+
             MarcaSelecionada = HttpContext.Current.Request.QueryString["marcaId"];
+
             if (!string.IsNullOrEmpty(MarcaSelecionada))
             {
-                Modelos = modeloRepositorio.ObterMarca(Convert.ToInt32(MarcaSelecionada));
+                Modelos = modeloRepositorio
+                    .ObterPorMarca(Convert.ToInt32(MarcaSelecionada));
             }
+
             Cores = corRepositorio.Obter();
-            //    Modelos = modeloRepositorio.o;
-            Combustiveis = Enum.GetValues(typeof(Combustivel)).Cast<Combustivel>().ToList();
-            Cambios = Enum.GetValues(typeof(Cambio)).Cast<Cambio>().ToList();
+
+            Combustiveis = Enum
+                .GetValues(typeof(Combustivel))
+                .Cast<Combustivel>()
+                .ToList();
+
+            Cambios = Enum
+                .GetValues(typeof(Cambio))
+                .Cast<Cambio>()
+                .ToList();
         }
 
         public void Gravar()
         {
             try
             {
+                var veiculo = new VeiculoPasseio();
                 var formulario = HttpContext.Current.Request.Form;
-                var veiculo = new VeiculoPasseio()
-                {
-                    Ano = Convert.ToInt16(formulario["ano"]),
-                    Cambio = (Cambio)Convert.ToInt32(formulario["cambio"]),
-                    Combustivel = (Combustivel)Convert.ToInt32(formulario["combustivel"]),
-                    Cor = corRepositorio.Obter(Convert.ToInt32(formulario["cor"])),
-                    Modelo = modeloRepositorio.ObterModelo(Convert.ToInt32(formulario["modelo"])),
-                    Observacao = formulario["observacao"],
-                    Placa = formulario["placa"],
-                    TipoCarroceria = TipoCarroceria.Picape
 
-                };
+                veiculo.Ano = Convert.ToInt32(formulario["ano"]);
+                veiculo.Cambio = (Cambio)Convert.ToInt32(formulario["cambio"]);
+                veiculo.Combustivel = (Combustivel)Convert.ToInt32(formulario["combustivel"]);
+                veiculo.Cor = corRepositorio.Obter(Convert.ToInt32(formulario["cor"]));
+                veiculo.Modelo = modeloRepositorio.Obter(Convert.ToInt32(formulario["modelo"]));
+                veiculo.Observacao = formulario["observacao"];
+                veiculo.Placa = formulario["placa"]/*.ToUpper()*/;
+                veiculo.TipoCarroceria = TipoCarroceria.Hatch;
 
                 veiculoRepositorio.Gravar(veiculo);
             }
             catch (FileNotFoundException ex)
             {
-                MensagemErro = $"Arquivo{ex.FileName} não encontrato";
+                MensagemErro = $"Arquivo {ex.FileName} não encontrado!";
             }
-            catch (DirectoryNotFoundException ex)
-            {
-                MensagemErro = $"caminho não encontrado";                
+            catch (DirectoryNotFoundException)
+            {                
+                MensagemErro = "Caminho não encontrado!";
             }
             catch (Exception ex)
             {
-                MensagemErro = "Eita algo deu errado!";
-                // Logar (ex);
+                MensagemErro = "Eita, algo deu errado!";
+                // Logar(ex);
             }
             finally
             {
-                //não é obrigatorio e roda sempre, com sucesso ou erro.
-                // se tiver um retur, o finally também é executado.
+                // não é obrigatório e roda sempre, com sucesso ou erro.
+                // se tiver um return, o finally também é executado!!!
             }
         }
     }
-
 }

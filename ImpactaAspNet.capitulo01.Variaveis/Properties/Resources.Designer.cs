@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ImpactaAspNet.capitulo01.Variaveis.Properties
+namespace ImpactaAspNet.Capitulo01.Variaveis.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace ImpactaAspNet.capitulo01.Variaveis.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ImpactaAspNet.capitulo01.Variaveis.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ImpactaAspNet.Capitulo01.Variaveis.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

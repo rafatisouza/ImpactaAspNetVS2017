@@ -6,14 +6,12 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class RepositorioBase
     {
-        public string CaminhoArquivo { get; }
-
-        public RepositorioBase(string caminhoArquivo)
+        public RepositorioBase(string chave)
         {
-             CaminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
-                                        ConfigurationManager.AppSettings[caminhoArquivo]);
+            CaminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                ConfigurationManager.AppSettings[chave]);
         }
 
-        
+        public string CaminhoArquivo { get; }
     }
 }

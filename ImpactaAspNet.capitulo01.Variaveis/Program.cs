@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ImpactaAspNet.capitulo01.Variaveis
+namespace ImpactaAspNet.Capitulo01.Variaveis
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ImpactaAspNet.capitulo01.Variaveis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new VariaveisForm());
         }
     }
 }

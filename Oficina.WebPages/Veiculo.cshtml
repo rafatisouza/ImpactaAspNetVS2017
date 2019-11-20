@@ -9,14 +9,20 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Cadastro de veículos</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <style>
-        label {
-            min-width: 100px;
-            display: inline-block;
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 16px;
         }
 
-        select, input {
+        label {
+            width: 100px;
+            float: left;
+            /*display: inline-block;*/
+        }
+
+        input, select {
             min-width: 200px;
             min-height: 24px;
             margin-bottom: 5px;
@@ -26,18 +32,14 @@
                 width: 300px;
             }
 
-        body {
-            font-family: 'Sunshiney', cursive;
-            font-size: 16px;
-        }
-        
-        #messagemErro {
-            height40px;
-            background-color: #ea0f0f;
+        #mensagemErro {
+            height: 40px;
+            background-color: #dc3545;
             margin-bottom: 10px;
             color: white;
+            text-align: center;
             vertical-align:middle;
-            line-height: 50px;
+            line-height: 40px;
         }
     </style>
 </head>
@@ -47,99 +49,93 @@
     @if (IsPost)
     {
         aplicacao.Gravar();
-        if (string.IsNullOrEmpty(aplicacao.MensagemErro)) {
+
+        if (string.IsNullOrEmpty(aplicacao.MensagemErro))
+        {
             Response.Redirect("veiculo");
         }
         else
-        {  
-            <div id="messagemErro">@aplicacao.MensagemErro</div>
+        {
+            <div id="mensagemErro">@aplicacao.MensagemErro</div>
         }
     }
-    
-    <form method0="post">
+    <form method="post">
         <label>Marca</label>
         <select onchange="obterModelos(this.value)" name="marca">
-            <optionvalue ="value">
-                Selecione</option>
-                @{
-
-                    foreach (var marca in aplicacao.Marcas)
-                    {
-                        <option value="@marca.Id" selected="@Convert.ToBoolean(marca.Id.ToString() ==  aplicacao.MarcaSelecionada)">@marca.Nome</option>
-                    }
-
-                }
-
+            <option value="">Selecione</option>
+            @foreach (var marca in aplicacao.Marcas)
+            {
+                <option value="@marca.Id"
+                        selected="@Convert.ToBoolean(marca.Id.ToString() == aplicacao.MarcaSelecionada)">
+                    @marca.Nome
+                </option>
+            }
         </select>
         <br />
+
         <label>Modelo</label>
         <select name="modelo">
-            <option value="value">Selecione</option>
-            @{
-
-                foreach (var modelo in aplicacao.Modelos)
-                {
-                    <option value="@modelo.Id">@modelo.Nome</option>
-                }
-
+            <option value="">Selecione</option>
+            @foreach (var modelo in aplicacao.Modelos)
+            {
+                <option value="@modelo.Id">@modelo.Nome</option>
             }
         </select>
         <br />
+
         <label>Cor</label>
         <select name="cor">
-            <option value="value">Selecione</option>
-            @{
-
-                foreach (var cor in aplicacao.Cores)
-                {
-                    <option value="@cor.Id">@cor.Nome</option>
-                }
+            <option value="">Selecione</option>
+            @foreach (var cor in aplicacao.Cores)
+            {
+                <option value="@cor.Id">@cor.Nome</option>
             }
         </select>
         <br />
+
         <label>Combustível</label>
         <select name="combustivel">
-            <option value="value">Selecione</option>
-            @{
-
-                foreach (var combustivel in aplicacao.Combustiveis)
-                {
-                    <option value="@((int)combustivel)">@combustivel</option>
-                }
+            <option value="">Selecione</option>
+            @foreach (var combustivel in aplicacao.Combustiveis)
+            {
+                <option value="@((int)combustivel)">@combustivel</option>
             }
         </select>
         <br />
-        <label>Cambio</label>
-        <select name="Cambio">
-            <option value="value">Selecione</option>
-            @{
 
-                foreach (var cambio in aplicacao.Cambios)
-                {
-                    <option value="@((int)cambio)">@cambio</option>
-                }
+        <label>Câmbio</label>
+        <select name="cambio">
+            <option value="">Selecione</option>
+            @foreach (var cambio in aplicacao.Cambios)
+            {
+                <option value="@((int)cambio)">@cambio</option>
             }
         </select>
         <br />
-        <label>Placa</label>
-        <input type="text" name="placa" value="" />
+
+        <label for="placa">Placa</label>
+        <input type="text" name="placa" id="placa" />
         <br />
-        <label>Ano</label>
-        <input type="text" name="anome" value="" />
+
+        <label for="ano">Ano</label>
+        <input type="text" name="ano" id="ano" />
         <br />
-        <label>Observação</label>
+
+        <label for="observacao">Observação</label>
         <br />
-        <textarea name="observacao" contenteditable="true" cols="40" rows="10"></textarea>
+        <textarea name="observacao" id="observacao" cols="40" rows="10"></textarea>
         <br />
-        <input type="submit" name="gravar" value="Gravar" />
+
+        <input type="submit" value="Gravar" />
     </form>
+
     <script type="text/javascript">
         function obterModelos(marcaId) {
             const nomePagina = document.location.pathname;
-            document.location.href = nomePagina + "?marcaid=" + marcaId;
+
+            document.location.href = nomePagina + "?marcaId=" + marcaId;
         }
     </script>
+
 </body>
 </html>
-
-

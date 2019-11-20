@@ -1,30 +1,32 @@
-﻿using Oficina.Repositorios.SistemaArquivos;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Oficina.Repositorios.SistemaArquivos.Tests
 {
     [TestClass()]
     public class MarcaRepositorioTests
     {
-        MarcaRepositorio marcaRepositorio = new MarcaRepositorio();
-        [TestMethod()]
-        public void MarcaObterTest()
-        {
+        private MarcaRepositorio marcaRepositorio = new MarcaRepositorio();
 
+        [TestMethod()]
+        public void ObterTest()
+        {
             var marcas = marcaRepositorio.Obter();
-            Assert.IsTrue(marcas.Count > 0);
+
+            foreach (var marca in marcas)
+            {
+                Console.WriteLine($"{marca.Id} - {marca.Nome}");
+            }
         }
 
         [TestMethod()]
-        public void MarcaObterIDTest()
+        public void ObterPorIdTest()
         {
-
             var marca = marcaRepositorio.Obter(1);
             Assert.AreEqual(marca.Nome, "Ford");
 
-            marca = marcaRepositorio.Obter(20);
+            marca = marcaRepositorio.Obter(8);
             Assert.IsNull(marca);
         }
-        
     }
 }

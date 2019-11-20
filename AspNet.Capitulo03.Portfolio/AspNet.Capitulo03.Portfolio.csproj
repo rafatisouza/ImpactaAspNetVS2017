@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9BF4DC78-B5A8-4918-BE0F-710A243E0CE3}</ProjectGuid>
+    <ProjectGuid>{6D1B3E28-168A-4749-8BC7-15AD2AF344A5}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -34,7 +34,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -168,13 +167,13 @@
     <Content Include="Content\fancybox\fancybox_overlay.png" />
     <Content Include="Content\fancybox\fancybox_sprite%402x.png" />
     <Content Include="Content\fancybox\fancybox_sprite.png" />
-    <Content Include="Content\imagens\MonaLisa.jpg" />
-    <Content Include="Content\imagens\Portifolio\img10.jpg" />
-    <Content Include="Content\imagens\Portifolio\img11.jpg" />
-    <Content Include="Content\imagens\Portifolio\img12.jpg" />
-    <Content Include="Content\imagens\Portifolio\img7.jpg" />
-    <Content Include="Content\imagens\Portifolio\img8.jpg" />
-    <Content Include="Content\imagens\Portifolio\img9.jpg" />
+    <Content Include="Content\Imagens\monalisa.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img25.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img26.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img27.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img28.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img29.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img30.jpg" />
     <Content Include="Content\jquery.fancybox-buttons.css" />
     <Content Include="Content\jquery.fancybox-thumbs.css" />
     <Content Include="Content\jquery.fancybox.css" />
@@ -253,9 +252,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50089</DevelopmentServerPort>
+          <DevelopmentServerPort>49946</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50089/</IISUrl>
+          <IISUrl>http://localhost:49946/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
