@@ -25,8 +25,14 @@ namespace Loja.Repositorios.SqlServer
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            //Alterar schema
+            //modelBuilder.HasDefaultSchema("LJ");
+
             modelBuilder.Configurations.Add(new ProdutoConfiguration());
             modelBuilder.Configurations.Add(new CategoriaConfiguration());
+            modelBuilder.Configurations.Add(new ProdutoImagemConfiguration());
+            
+            
             base.OnModelCreating(modelBuilder);
         }
     }
