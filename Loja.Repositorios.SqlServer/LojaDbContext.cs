@@ -14,7 +14,9 @@ namespace Loja.Repositorios.SqlServer
     {
         public LojaDbContext() : base("lojaSqlServer")
         {
-
+            //1 - Enable-Migrations
+            //2 - Add-Mrigration NomeDaModificação
+            //3 - Update-Database
         }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Pedidos> Peditos { get; set; }
@@ -35,5 +37,7 @@ namespace Loja.Repositorios.SqlServer
             
             base.OnModelCreating(modelBuilder);
         }
+
+        public System.Data.Entity.DbSet<Loja.Dominio.ProdutoImagem> ProdutoImagems { get; set; }
     }
 }
