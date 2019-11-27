@@ -10,6 +10,7 @@ using Loja.Dominio;
 using Loja.Mvc.Mapeamentos;
 using Loja.Repositorios.SqlServer;
 using Loja.Mvc.Areas.Vendas.Models;
+using Loja.Mvc.Helppers;
 
 namespace Loja.Mvc.Areas.Vendas.Controllers
 {
@@ -119,9 +120,10 @@ namespace Loja.Mvc.Areas.Vendas.Controllers
 
         // POST: Vendas/Produtos/Delete/5
         //[Authorize(Roles = "Zeus")]// Empilhamento do authoriza
-        [Authorize(Roles = "Master, Premium, Gerente, Odin")]//Ou 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        //[Authorize(Roles = "Master, Premium, Gerente, Odin")]//Ou 
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        [AuthorizeRole(PerfilUsuario.Master, PerfilUsuario.Gerente )]
         public ActionResult DeleteConfirmed(int id)
         {
             Produto produto = db.Produtos.Find(id);
